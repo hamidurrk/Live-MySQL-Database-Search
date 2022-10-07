@@ -1,0 +1,19 @@
+<h3>{{numrows}} Records Found</h3>
+<table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Serial Number</th>
+            <th>Customer ID Number</th>
+            <th>Consumed Unit</th>
+            <th>Entry Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in entries %}
+        <tr>
+            <td>{{row.sl}}</td>
+            <td>{{row.customer_id}}</td>
+            <td>{{row.unit}}</td>
+            <td>{{row.time}}</td>
+        </tr>
+        {% endfor %}
